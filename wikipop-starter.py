@@ -1,6 +1,5 @@
 """
  Sample code for SI 507 Waiver Assignment
- Mark W. Newman
  University of Michigan School of Information
 
  Based on "Pygame base template for opening a window" 
@@ -9,6 +8,7 @@
      http://programarcadegames.com/
      http://simpson.edu/computer-science/
  
+See README for the assignment for instructions to complete and submit this.
 """
  
 import pygame
@@ -23,21 +23,21 @@ RED = (255, 0, 0)
 
 
 # You must construct a dictionary of this form from your wikipedia search
-# See test.py for more details on the format requirements for the dict
+# See test.py for more details on the format requirements for the dictionary
 sample_pos_dict = {"JJ": [("happy", 5), ("sad", 4)], "NN": [("ball", 3), ("bat", 2)]}
 
 # You must leave this line in your submission, and you must pass the test!
-if test.test(sample_pos_dict):
-    print ("Yay, you passed this part of the test!")
+if test.test(sample_pos_diction):
+    print ("You passed this sample_pos_diction part of the test!")
 else:
-    print ("Oh noes! You didn't pass. Please try again")
+    print ("You didn't pass. Please try again")
 
-# this is the dummy word list for testing
-# you will need to replace this with words extracted from your wikipedia search
-# see README for more details
+# This is the temp word list for testing.
+# You will need to **replace this** with words extracted from your wikipedia search.
+# See README for more details.
 word_list = ["apple", "banana", "pear", "grape", "pineapple", "kiwi"]
 
-# the structure that manages the balls shown on the screen
+# The class that manages the balls shown on the screen in the game.
 class BallManager:
 
     INIT_SPEED = 1
@@ -62,8 +62,8 @@ class BallManager:
             s += b.word + ", "
         return s
 
-# the class for each ball showing on the screen
-# you can play around with size, color, font, etc. 
+# The class for each ball showing on the screen.
+# You can play around with size, color, font, etc. 
 class WordBall:
 
     def __init__(self, word, speed):
@@ -79,7 +79,7 @@ class WordBall:
         if (self.y_pos > pygame.display.Info().current_h - self.height):
             self.y_pos = 0
 
-# initialize game
+# Initialize game
 pygame.init()
 
 size = (1000, 600)
@@ -87,21 +87,19 @@ screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Type to Win")
 clock = pygame.time.Clock()
  
-# Loop until the user clicks the close button.
-done = False
+# Loop until the user clicks the close button...
 
 ball_manager = BallManager()
-
 ball_font = pygame.font.Font(None, 36)
 keys_font = pygame.font.Font(None, 60)
-
+done = False
 game_over = False
 keys_typed = ''
 
-# -------- Main Display Loop -----------
+# Main display loop
 while not done:
     
-    # handle input events
+    # Handle input events.
     key = ''
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -111,15 +109,15 @@ while not done:
             keys_typed += key
 
 
-    # manipulate game objects
+    # Manipulate game objects.
     for b in ball_manager.active_balls:
         b.move_ball()
 
 
-    # blank the screen
+    # Blank the screen
     screen.fill(WHITE)
 
-    # render game objects
+    # Render game objects
     for ball in ball_manager.active_balls:
         pygame.draw.ellipse(screen, RED, [ball.x_pos, ball.y_pos, ball.width, ball.height]) 
         text = ball_font.render(ball.word, 1, BLACK)
@@ -136,10 +134,10 @@ while not done:
     screen.blit(text, textpos)
 
 
-    # update the screen with what we've drawn.
+    # Update the screen with what we've drawn.
     pygame.display.flip()
  
-    # limit to 60 frames per second
+    # Limit to 60 frames per second
     clock.tick(60)
  
 # Close the window and quit.
