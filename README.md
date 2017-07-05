@@ -39,7 +39,7 @@ We have provided some starter code that demonstrates how to render stuff using p
 * *Fork* the repository that GitHub Classroom created for you.
 * Edit the `wikipop-starter.py` Python file/add other files if needed. You should make at least 3 git commits to your project.
 * Push all of your changes to your GitHub repository that you forked. 
-* [Fill out the submission form](REPLACELINK.COM) ONLY after you have completed your assignment and are ready for it to be graded. Your assignment will only be graded if you submit the form, and it can be graded any time after you submit the form.
+* [Fill out the submission form](https://goo.gl/forms/5KhgvETRZG8dlZhM2) ONLY after you have completed your assignment and are ready for it to be graded. Your assignment will only be graded if you submit the form, and it can be graded any time after you submit the form.
 
 
 
