@@ -1,4 +1,8 @@
-**Read all of these instructions carefully before beginning!**
+#SI 507 Waiver Instructions
+
+##**Read all of these instructions carefully before beginning!**
+
+###What you need to do
 
 For this assignment, you will make a simple game that does the following:
 * accepts a search term on the command line (e.g., a user should be able to run your game with `$ python mygame.py "Harry Potter"`)
@@ -9,7 +13,7 @@ For this assignment, you will make a simple game that does the following:
 
 For a demo of how the game should work when it's complete, see [the demo video](https://www.youtube.com/watch?v=o7XdEKSpxEM).
 
-Yes, that's a pretty arbitrary game. But it's a GREAT exercise to help us find out if 507 would be redundant for you. 
+Yes, that's a pretty arbitrary game. But it's a great exercise to help us find out if 507 would be redundant for you. (And it could be fun!)
 
 In order to complete this assignment, you will need to (probably quickly) figure out how to install and use three Python libraries that you most likely have never used (though if you have, it's somewhat likely that 507 is overkill for you): `wikipedia`, `nltk`, and `pygame`. 
 
@@ -29,13 +33,13 @@ We have provided some starter code that demonstrates how to render stuff using p
 * Use the latest NLTK (3.0) (see <http://www.nltk.org>)
 * Use the latest wikipedia api for pytyon (1.4.0) (see <https://pypi.python.org/pypi/wikipedia/>)
 * Use the latest pygame (1.9.1) (see <http://pygame.org/download.shtml>)
-	* Note that on my MacBook Pro I was able to just `pip install pygame` and had no issues. I gather that Windows users may have a bit more of a struggle, but rest assured that pygame is popular enough that you ought to be able to find a solution online for your particular configuration. I would definitely recommend not waiting til the last minute on this; solving installation quandaries is part of what you will address in SI507, so if this is so hard as to be terrible, 507 is likely a good course for you to take! (If you have never heard of some of the concepts addressed here, you may want to consider enrolling in [SI 506]().)
+	* Note that on my MacBook Pro I was able to just `pip install pygame` and had no issues. I gather that Windows users may have a bit more of a struggle, but rest assured that pygame is popular enough that you ought to be able to find a solution online for your particular configuration. I would definitely recommend not waiting til the last minute on this; solving installation quandaries is part of what you will address in SI507, so if this is so hard as to be terrible, 507 is likely a good course for you to take! (If you have never heard of some of the concepts addressed here, you may want to consider enrolling in SI 506.)
 
-**Notes:**
+###**Notes**
 * Please don't use any *other* third-party libraries (our solution didn't need any others, so we know it should be possible). We need to run and grade many of these and expect to do so automatically, without going through other installations.
 * If you already have a python installation on your machine with a bunch of libraries, etc., I strongly recommend you set up a [virtualenv](https://virtualenv.pypa.io/en/stable/) for this assignment to avoid any possible library conflicts.
 
-**How to complete and submit this assignment:**
+###**How to complete and submit this assignment:**
 * *Fork* the repository that GitHub Classroom created for you.
 * Edit the `wikipop-starter.py` Python file/add other files if needed. You should make at least 3 git commits to your project.
 * Push all of your changes to your GitHub repository that you forked. 
