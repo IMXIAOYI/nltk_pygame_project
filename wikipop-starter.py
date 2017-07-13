@@ -270,7 +270,7 @@ while not done:
     # Limit to 60 frames per second
     clock.tick(60)
 
-
+#if all balled are popped, this happens
 if done:
 	screen.fill(BLACK)
 	end_text=keys_font.render('Game Over', 1, RED)
