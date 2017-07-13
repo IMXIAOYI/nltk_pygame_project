@@ -21,17 +21,18 @@ import json
 import re
 import random
 
+#accepting command line arguments
 query_terms_list = sys.argv[1:]
 query_terms = ''.join(query_terms_list)
-#query_terms = "Albert Einstein"
 
+#create url
 def create_url(baseurl, params_d):
 	res = []
 	for k in params_d:
 			res.append("{}={}".format(k, params_d[k]))
 	return baseurl + "&".join(res)
 
-
+#cache 
 CACHE_FNAME = "C:/Users/user/Workspaces/python/SI506waiver/waiver_cached_data.json"
 try:
 	cache_file = open(CACHE_FNAME, 'r')
@@ -41,7 +42,7 @@ try:
 except: # But if anything doesn't work,
 	CACHE_DICTION = {}
 
-
+#get query result
 def get_query_result(queryterms):
 	baseurl = "https://en.wikipedia.org/w/api.php?"
 	query_url={}
@@ -70,6 +71,7 @@ def get_query_result(queryterms):
 		fw.close() # Close the open file
 		return CACHE_DICTION[unique_ident]
 
+#remove html tags 
 #############################################################################################################################
 #get the filter_tags and replaceCharEntity from https://gist.github.com/dervn/859717/15b69ef75a04489f3a517b3d4f70c7e97b39d2ec
 #############################################################################################################################
@@ -117,6 +119,7 @@ def repalce(s,re_exp,repl_string):
     return re_exp.sub(repl_string,s)
 ##################################################################################################################################   
 
+#make the query results looks like {"h": ["happy", "had"], "b": ["ball", "bat"]}
 query_result= get_query_result(query_terms)
 query_result_articleonly = []
 for a_page in query_result['query']['pages']:
@@ -142,13 +145,11 @@ for a_fir in freq_adj_firs:
 	alist=[]
 	for a_word in freq_adj_list:
 		if a_fir==a_word[0]:
-#			print(a_word)
 			alist.append(a_word)
 			word_dict[a_fir]=alist
-#print(freq_adj_list)
-#print(freq_adj_firs)			
-#print(word_dict)
 
+
+#pygame part			
 # Define some colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -170,7 +171,8 @@ class BallManager:
 
     def create_ball(self, word):
         self.active_balls.append(WordBall(word, self.INIT_SPEED))
-
+	
+#write del_ball function
     def del_ball(self, word):
     	for b in self.active_balls:
     		if b.word==word:
