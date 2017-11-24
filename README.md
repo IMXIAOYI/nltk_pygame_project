@@ -1,10 +1,5 @@
-# SI 507 Waiver Instructions
-
-**Read all of these instructions carefully before beginning!**
-
-### What you need to do
-
-For this assignment, you will make a simple game that does the following:
+<those are requirements from my si507 course in umich>
+In this project, I did those things:
 * accepts a search term on the command line (e.g., a user should be able to run your game with `$ python mygame.py "Harry Potter"`)
 * performs a search on wikipedia using that search term (e.g. "Harry Potter")
 * takes the content of the top 5 pages returned by the search, and determines the most common adjectives across those pages
