@@ -1,4 +1,4 @@
-those are requirements from my si507 course in umich
+those are requirements from my si507 course in umich.
 In this project, I did those things:
 
 * accepts a search term on the command line (e.g., a user should be able to run your game with `$ python mygame.py "Harry Potter"`)
